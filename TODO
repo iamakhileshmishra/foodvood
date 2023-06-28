@@ -1,0 +1,4 @@
+1. Add env path so not to expose the STRIPE PUBLISHING KEY on frontend /cart.js
+2. push actual food data and quanity to the stripe server so to get the order deliver 
+
+Good Night :)

@@ -14,7 +14,8 @@ import Login from './screens/Login';
 import Signup from './screens/Signup';
 import { CartProvider } from './components/ContextReducer';
 import MyOrder from './screens/MyOrder';
-
+import Success from './screens/success';
+import Failure from "./screens/failure";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/success" element={<Success />} />
+            <Route exact path="/failure" element={<Failure />} />
+
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/myorder" element={<MyOrder />} />
