@@ -14,10 +14,7 @@ export default function Cart() {
     );
   }
 
-  // const stripePromise = loadStripe(process.env.STRIPE_PUBLISHING_KEY);
-  const stripePromise = loadStripe(
-    "pk_test_51LDYXSSCGWsTQgZMsWoNGyObnPvAsxwWO4CqdoDmTZAlYrIOAXtvTA5vWxT0JdCnjxuvz4dlNCOnK3Hzc2x9BBnb00Y6ORo5qY"
-  );
+  const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHING_KEY);
   // console.log(process.env.STRIPE_PUBLISHING_KEY);
   const handleCheckOut = async () => {
   let userEmail = localStorage.getItem("userEmail");
