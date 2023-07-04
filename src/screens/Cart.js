@@ -15,7 +15,7 @@ export default function Cart() {
   }
 
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHING_KEY);
-  // console.log(process.env.STRIPE_PUBLISHING_KEY);
+  
   const handleCheckOut = async () => {
   let userEmail = localStorage.getItem("userEmail");
   let response = await fetch("http://localhost:5000/api/auth/orderData", {
@@ -67,7 +67,6 @@ export default function Cart() {
   let totalPrice = data.reduce((total, food) => total + food.price, 0);
   return (
     <div>
-      {console.log(data)}
       <div className="container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md">
         <table className="table table-hover ">
           <thead className=" text-success fs-4">

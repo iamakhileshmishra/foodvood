@@ -39,8 +39,6 @@ export default function Card(props) {
         break;
       }
     }
-    console.log(food)
-    console.log(new Date())
     if (food !== []) {
       if (food.size === size) {
         await dispatch({ type: "UPDATE", id: foodItem._id, price: finalPrice, qty: qty })
@@ -65,13 +63,10 @@ export default function Card(props) {
     setSize(priceRef.current.value)
   }, [])
 
-  // useEffect(()=>{
-  // checkBtn();
-  //   },[data])
 
   let finalPrice = qty * parseInt(options[size]);   //This is where Price is changing
   // totval += finalPrice;
-  // console.log(totval)
+
   return (
     <div>
 

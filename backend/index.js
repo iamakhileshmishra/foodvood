@@ -1,7 +1,6 @@
 global.foodData = require("./db")(function call(err, data, CatData) {
   if (err) console.log(err);
   global.foodData = data;
-  // console.log(data)
   global.foodCategory = CatData;
 });
 
@@ -62,5 +61,4 @@ app.use("/api/auth", require("./Routes/Auth"));
 app.use("/api/displaydata", require("./Routes/DisplayData"));
 app.listen(port, () => {
   console.log(`Backend running on  http://localhost:${port}`);
-  // console.log(process.env.STRIPE_SECRET_KEY);
 });

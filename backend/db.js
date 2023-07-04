@@ -21,8 +21,6 @@ module.exports = function (callback) {
       const foodItems = await foodCollection.find({}).toArray();
       const categories = await categoryCollection.find({}).toArray();
 
-      // console.log("Food Items:", foodItems);
-      // console.log("Categories:", categories);
 
       callback(null, foodItems, categories);
     })
