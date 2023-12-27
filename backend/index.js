@@ -45,8 +45,8 @@ app.post("/api/auth/create-checkout-session", async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/failure",
+      success_url: "https://foodvood.onrender.com/success",
+      cancel_url: "https://foodvood.onrender.com/failure",
       customer_email: email,
     });
 
